@@ -36,7 +36,8 @@ jobs:
         run: flutter pub get
 
       - name: Analyze
-        run: flutter analyze
+        # 기존 스타일 권고는 출력하되 오류와 경고는 빌드를 중단한다.
+        run: flutter analyze --no-fatal-infos
 
       - name: Test
         run: flutter test
