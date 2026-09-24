@@ -83,9 +83,9 @@ void main() {
     scaffoldKey.currentState!.openDrawer();
     await tester.pumpAndSettle();
 
-    expect(find.text("Next Week's Menu Preview"), findsOneWidget);
+    expect(find.text("Next Week's Menu"), findsOneWidget);
 
-    await tester.tap(find.text("Next Week's Menu Preview"));
+    await tester.tap(find.text("Next Week's Menu"));
     await tester.pumpAndSettle();
 
     expect(find.byType(NextWeekPreviewPage), findsOneWidget);
